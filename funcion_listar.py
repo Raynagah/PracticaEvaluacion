@@ -11,4 +11,4 @@ def listar_trabajadores():
         for i in range(len(trabajadores)):
             print(f"Trabajador {i+1}");
             trabajador=(trabajadores[i]);
-            print(f"Nombre: {trabajadores['nombre']}\nApellido: {trabajadores['apellido']}\nCargo: {trabajadores['cargo']}\nSueldo Bruto: {trabajador['sueldo bruto']}\nDescuento AFP{trabajadores['descuento afp']}\nDescuento Salud{trabajadores['descuento salud']}\nSueldo Líquido:{trabajadores['sueldo liquido']}");
+            print(f"Nombre: {trabajadores['nombre']}\nApellido: {trabajadores['apellido']}\nCargo: {trabajadores['cargo']}\n");

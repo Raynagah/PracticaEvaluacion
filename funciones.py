@@ -73,7 +73,6 @@ def funcion_agregar(lista_Trabajadores):
     descuentoSalud = sueldo_bruto * 0.07
     descuentoAFP = sueldo_bruto * 0.12
     sueldoLiquido = sueldo_bruto - descuentoSalud - descuentoAFP
-    
 
     #Agregar trabajador a un diccionario
     trabajador = {"nombre": nombre, "apellido": apellido, "cargo": cargo, "sueldoBruto": sueldo_bruto, "descuentoSalud": descuentoSalud, "descuentoAFP": descuentoAFP, "sueldoLiquido": sueldoLiquido}
@@ -81,13 +80,6 @@ def funcion_agregar(lista_Trabajadores):
     #Agregar el trabajador antes ingresado a una lista de trabajadores
     lista_Trabajadores.append(trabajador)
     print(lista_Trabajadores)
-
-    
-
-
-
-
-
 
     #Importamos las funciones que utilizaremos a lo largo del código.
 import json, time;

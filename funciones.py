@@ -81,7 +81,7 @@ def funcion_agregar(lista_Trabajadores):
     lista_Trabajadores.append(trabajador)
     print(lista_Trabajadores)
 
-    #Importamos las funciones que utilizaremos a lo largo del código.
+#Importamos las funciones que utilizaremos a lo largo del código.
 import json, time;
 #Creamos la función para listar a los trabajadores
 def listar_trabajadores():
@@ -98,3 +98,36 @@ def listar_trabajadores():
             print(f"Trabajador {i+1}");
             trabajador=(trabajadores[i]);
             print(f"Nombre: {trabajadores['nombre']}\nApellido: {trabajadores['apellido']}\nCargo: {trabajadores['cargo']}\n");
+
+#                   Planilla General    
+def planillaGeneral(listaTrabajadores):
+    import json
+
+    datos=listaTrabajadores
+
+    archivo = "planillaSueldos.json"
+    #Creacion de archivo json con la planilla
+    with open(archivo, "w", encoding='utf-8') as archivo:
+        json.dump(datos, archivo)
+    print("La planilla se ha creado correctamente.")
+
+def planillaFiltrada(listaTrabajadores, cargo):
+    import json
+    listaFiltro=[]
+    #Filtrando en la lista de trabajadores
+    for i in range(len(listaTrabajadores)):
+        trabajador = listaTrabajadores[i]
+        if trabajador["cargo"] == cargo:
+            listaFiltro.append(trabajador)
+    if cargo=="CEO":
+        archivo = (f"planilla{cargo}.json")
+    elif cargo=="Desarrollador":
+        archivo = (f"planilla{cargo.upper()}.json")
+    elif cargo=="Analista de datos":
+        archivo = ("planillaANALISTA.json")
+    else:
+        print("Error.")
+
+    with open(archivo, "w", encoding='utf-8') as archivo:
+        json.dump(listaFiltro,archivo)
+    print(f"La planilla {cargo} ha sido creada correctamente.")

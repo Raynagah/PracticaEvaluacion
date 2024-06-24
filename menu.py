@@ -1,10 +1,10 @@
 #Importamos las funciones necesarias para la realización del programa.
 import time
-import funciones;
+import funciones as funcion
 
 #Declaramos variables para ejecutar el menú de opciones.
 bandera_menu=True;
-
+lista = []
 
 print("¡Bienvenido a MenúDuoc!");
 #Solicitamos al usuario que ingrese la opción que estime conveniente.
@@ -22,8 +22,10 @@ while bandera_menu:
     else:
         #De acuerdo con la opción ingresada, llamamos a la función correspondiente.
         if opcion==1:
+            funcion.funcion_agregar(lista)
             print("");
         elif opcion==2:
+            funcion.listar_trabajadores()
             print("");
         elif opcion==3:
             print("");
